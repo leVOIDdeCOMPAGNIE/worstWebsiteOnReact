@@ -9,6 +9,7 @@ import catcherActiveSrc from './images/beatfruit.png';
 export const App = () => {
     const [status, setStatus] = useState('wait');
     const onActive = () => setStatus('active');
+    const disActive = () => setStatus('wait');
 
     return <div className="App">
         <Player
@@ -17,6 +18,7 @@ export const App = () => {
             activeSrc={batterActiveSrc}
             status={status}
             onActive={onActive}
+            disActive={disActive}
         />
         <Player
             name={'catcher'}
